@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  dadjokegenerator:
+    image: ${DOCKER_REGISTRY-}dadjokegenerator
+    ports:
+      - 56198:80
+    build:
+      context: .
+      dockerfile: DadJokeGenerator/Dockerfile
